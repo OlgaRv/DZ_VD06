@@ -19,25 +19,25 @@
             <label for="town">Город</label>
             <input id="town" type="text" name="town" class="form-control" required>
         </div>
-                <div class="form-group">
+        <div class="form-group">
             <label for="hobby">Хобби</label>
-            <textarea id="hobby" name="hobby" rows="1" class="form-control" required></textarea>
+            <textarea id="hobby" name="hobby" rows="2" class="form-control" required></textarea>
         </div>
-                <div class="form-group">
+        <div class="form-group">
             <label for="age">Возраст</label>
-            <textarea id="age" name="age" rows="1" class="form-control" required></textarea>
+            <input id="age" name="age" rows="1" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
     </form>
     <hr>
     <h2 class="mt-4">Введенные данные</h2>
-    {% for post in posts %}
+    {% for profile in profiles %}
         <div class="card my-3">
             <div class="card-body">
-                <p class="card-text">Вас зовут:{{ post.name> }}</p>
-                <p class="card-text">Вы живете в городе: {{ post.town }}</p>
-                <p class="card-text">Ваше хобби:{{ post.hobby> }}</p>
-                <p class="card-text">Ваш возраст: {{ post.age }}</p>
+                <p class="card-text">Ваше имя: {{ profile.username }}</p>
+                <p class="card-text">Ваш город: {{ profile.town }}</p>
+                <p class="card-text">Ваши увлечения: {{ profile.hobby }}</p>
+                <p class="card-text">Ваш возраст: {{ profile.age }}</p>
             </div>
         </div>
     {% endfor %}
